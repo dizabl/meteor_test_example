@@ -1,0 +1,35 @@
+<head>
+  <title>FirstApp</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+  <p>{{ > loginButtons }}</p>
+  <p>
+  	{{ #if currentUser }}
+  		user is logged in 
+  	{{ /if}}
+
+
+  </p>
+  {{> hello }}
+
+  <p>
+    {{> you }}
+  </p>
+</body>
+
+<template name="hello">
+  <button>Click Me</button>
+  <p>You've pressed the button {{counter}} times.</p>
+  <p>{{ vegetable.name }}</p>
+  {{ usr }}
+</template>
+
+<template name="you">
+  <ul>
+    {{ #each items }}
+      <li>{{name}}</li>
+    {{ /each }}
+  </ul>
+</template>
